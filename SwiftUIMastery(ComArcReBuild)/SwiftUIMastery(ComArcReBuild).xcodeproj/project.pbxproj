@@ -18,6 +18,7 @@
 		2BF5B335248F7B4C00F32C15 /* GuessFlag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF5B334248F7B4C00F32C15 /* GuessFlag.swift */; };
 		2BF5B338248F7E7000F32C15 /* SPAlert in Frameworks */ = {isa = PBXBuildFile; productRef = 2BF5B337248F7E7000F32C15 /* SPAlert */; };
 		2BF5B33A248F7EB300F32C15 /* BlurBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF5B339248F7EB300F32C15 /* BlurBackgroundView.swift */; };
+		2BF5B33C248F949700F32C15 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BF5B33B248F949700F32C15 /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		2BF5B320248F7A9400F32C15 /* GuessFlag.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GuessFlag.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BF5B334248F7B4C00F32C15 /* GuessFlag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuessFlag.swift; sourceTree = "<group>"; };
 		2BF5B339248F7EB300F32C15 /* BlurBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurBackgroundView.swift; sourceTree = "<group>"; };
+		2BF5B33B248F949700F32C15 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 		2BF5B2F7248F79F500F32C15 = {
 			isa = PBXGroup;
 			children = (
+				2BF5B33B248F949700F32C15 /* Default-568h@2x.png */,
 				2BF5B302248F79F500F32C15 /* SwiftUIMastery(ComArcReBuild) */,
 				2BF5B301248F79F500F32C15 /* Products */,
 			);
@@ -194,6 +197,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2BF5B33C248F949700F32C15 /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

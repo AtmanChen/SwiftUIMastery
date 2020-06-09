@@ -9,7 +9,7 @@ struct ContentView: View {
   var body: some View {
     ZStack {
       LinearGradient(
-        gradient: Gradient(colors: [.blue, .purple, Color.pink.opacity(0.6)]),
+        gradient: Gradient(colors: [.blue, .black]),
         startPoint: .top,
         endPoint: .bottom)
       VStack(spacing: 30) {
@@ -20,10 +20,10 @@ struct ContentView: View {
           Text("总分: ")
             .font(.body)
             .foregroundColor(.white)
-          +
-          Text("\(viewModel.score)")
-            .font(.title)
-            .foregroundColor(.white)
+            +
+            Text("\(viewModel.score)")
+              .font(.title)
+              .foregroundColor(.white)
         }
         .padding()
         .background(BlurBackground(style: .systemUltraThinMaterial))
@@ -35,16 +35,15 @@ struct ContentView: View {
           Text(viewModel.gameStrategy.rawValue)
             .foregroundColor(.white)
             .fontWeight(.semibold)
-            .padding()
-            .background(
-              Capsule()
-                .foregroundColor(viewModel.gameStrategy == .toWin ? Color.green : Color.red)
-            )
+            .padding(EdgeInsets(top: 4, leading: 8, bottom: 4, trailing: 8))
+            .background(viewModel.gameStrategy == .toWin ? Color.green : Color.red)
+            .opacity(0.8)
+            .clipShape(Capsule())
             .onTapGesture {
               self.viewModel.toggleStrategy()
-            }
+          }
           Text("这局")
-              .foregroundColor(.white)
+            .foregroundColor(.white)
         }
       }
     }
