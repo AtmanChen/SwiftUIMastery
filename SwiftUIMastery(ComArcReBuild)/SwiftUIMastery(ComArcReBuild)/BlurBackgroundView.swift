@@ -1,5 +1,6 @@
 // 
 
+import UIKit
 import SwiftUI
 
 public struct BlurBackground: UIViewRepresentable {

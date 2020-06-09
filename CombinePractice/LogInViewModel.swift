@@ -13,6 +13,7 @@ final class LogInViewModel: ObservableObject {
       .map { phone, password in
         phone.count >= 13 && password.count >= 6
       }
+      .prepend(false)
       .eraseToAnyPublisher()
   }
   

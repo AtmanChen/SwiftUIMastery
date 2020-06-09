@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:SwiftUIMastery(ComArcReBuild)/SwiftUIMastery(ComArcReBuild).xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:SwiftUIMastery.xcodeproj">
    </FileRef>
    <FileRef

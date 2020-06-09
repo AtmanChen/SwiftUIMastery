@@ -4,6 +4,7 @@ import SwiftUI
 
 struct LogInView: View {
   
+  @ObservedObject var viewModel = LogInViewModel()
   var logInButtonValid: Bool {
     phoneNumber.count >= 11 && password.count >= 6
   }
@@ -17,6 +18,12 @@ struct LogInView: View {
     GeometryReader { geometry in
       self.createBody(with: geometry.size)
     }
+    .gesture(
+      DragGesture()
+        .onChanged { _ in
+          self.endEditing()
+        }
+    )
   }
   
   private func createBody(with size: CGSize) -> some View {
@@ -31,7 +38,8 @@ struct LogInView: View {
         })
         HorizontalAnimatableView(focused: $phoneNumberFocused)
       }
-      .frame(width: size.width - 64, height: 30)
+        .frame(width: size.width - 64, height: 30)
+      
       VStack(alignment: .leading, spacing: 6) {
         TextField("Please input your password", text: $password, onEditingChanged: { _ in
           if self.passwordFocused == false {
@@ -42,7 +50,8 @@ struct LogInView: View {
         })
         HorizontalAnimatableView(focused: $passwordFocused)
       }
-      .frame(width: size.width - 64, height: 30)
+        .frame(width: size.width - 64, height: 30)
+      
       Button(action: {
         print("did click log in")
       }) {
@@ -54,11 +63,14 @@ struct LogInView: View {
           .background(
             Capsule()
               .foregroundColor(logInButtonValid ? Color.blue : Color.gray)
-              .shadow(color: .gray, radius: 5, y: 2)
-          )
+        )
       }
       .disabled(!logInButtonValid)
     }
+  }
+  
+  private func endEditing() {
+    UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
   }
 }
 
