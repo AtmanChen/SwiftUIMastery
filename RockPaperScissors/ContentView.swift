@@ -6,6 +6,8 @@ struct ContentView: View {
   
   @ObservedObject var viewModel = ViewModel()
   
+  static private var timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
+  
   var body: some View {
     ZStack {
       LinearGradient(
@@ -13,6 +15,7 @@ struct ContentView: View {
         startPoint: .top,
         endPoint: .bottom)
       VStack(spacing: 30) {
+        Spacer()
         Text("石头剪刀布")
           .font(.largeTitle)
           .fontWeight(.semibold)
@@ -41,12 +44,44 @@ struct ContentView: View {
             .clipShape(Capsule())
             .onTapGesture {
               self.viewModel.toggleStrategy()
-          }
+            }
           Text("这局")
             .foregroundColor(.white)
         }
+        
+        GestureView(gesture: viewModel.gameGesture)
+          .padding()
+          .font(.system(size: 100))
+        
+        Spacer()
+        
+        HStack {
+          ForEach(Gesture.allCases, id: \.self) { gesture in
+            Button(
+              action: {
+                // TODO: gesture action
+              }
+            ) {
+              GestureView(gesture: gesture)
+                .font(.system(size: 50))
+                .padding()
+            }
+          }
+        }
+        
+        Button(
+          action: {
+            self.viewModel.gameMode = self.viewModel.gameMode.toggleMode()
+        }
+        ) {
+          Text(viewModel.gameMode.description)
+            .foregroundColor(.white)
+            .font(.title)
+        }
+        Spacer()
       }
     }
+      .edgesIgnoringSafeArea(.all)
   }
 }
 

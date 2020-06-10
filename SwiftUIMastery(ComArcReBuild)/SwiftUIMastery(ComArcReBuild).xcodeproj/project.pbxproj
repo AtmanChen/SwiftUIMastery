@@ -19,6 +19,7 @@
 		2BF5B338248F7E7000F32C15 /* SPAlert in Frameworks */ = {isa = PBXBuildFile; productRef = 2BF5B337248F7E7000F32C15 /* SPAlert */; };
 		2BF5B33A248F7EB300F32C15 /* BlurBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF5B339248F7EB300F32C15 /* BlurBackgroundView.swift */; };
 		2BF5B33C248F949700F32C15 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BF5B33B248F949700F32C15 /* Default-568h@2x.png */; };
+		2BF5B37A2490D24100F32C15 /* GoodRest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF5B3792490D24100F32C15 /* GoodRest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		2BF5B334248F7B4C00F32C15 /* GuessFlag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuessFlag.swift; sourceTree = "<group>"; };
 		2BF5B339248F7EB300F32C15 /* BlurBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurBackgroundView.swift; sourceTree = "<group>"; };
 		2BF5B33B248F949700F32C15 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		2BF5B3792490D24100F32C15 /* GoodRest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodRest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 				2BF5B305248F79F500F32C15 /* SceneDelegate.swift */,
 				2BF5B307248F79F500F32C15 /* ContentView.swift */,
 				2BF5B334248F7B4C00F32C15 /* GuessFlag.swift */,
+				2BF5B3792490D24100F32C15 /* GoodRest.swift */,
 				2BF5B339248F7EB300F32C15 /* BlurBackgroundView.swift */,
 				2BF5B309248F79F600F32C15 /* Assets.xcassets */,
 				2BF5B30E248F79F600F32C15 /* LaunchScreen.storyboard */,
@@ -212,6 +215,7 @@
 				2BF5B33A248F7EB300F32C15 /* BlurBackgroundView.swift in Sources */,
 				2BF5B306248F79F500F32C15 /* SceneDelegate.swift in Sources */,
 				2BF5B308248F79F500F32C15 /* ContentView.swift in Sources */,
+				2BF5B37A2490D24100F32C15 /* GoodRest.swift in Sources */,
 				2BF5B335248F7B4C00F32C15 /* GuessFlag.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

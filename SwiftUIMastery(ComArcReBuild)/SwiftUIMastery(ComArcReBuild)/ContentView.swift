@@ -17,7 +17,12 @@ struct ContentView: View {
             )
           ) {
             Text("Guess Flag")
-          }.navigationViewStyle(DoubleColumnNavigationViewStyle())
+          }
+          .navigationViewStyle(DoubleColumnNavigationViewStyle())
+          
+          NavigationLink(destination: GoodRest()) {
+            Text("Good Rest")
+          }
         }
       }.navigationBarTitle("Composable-Architecture Rebuild")
     }

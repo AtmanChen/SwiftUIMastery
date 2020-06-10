@@ -61,18 +61,33 @@ enum GameStrategy: String, CaseIterable, Equatable {
   }
 }
 
+enum Gesture: CaseIterable {
+  case rock
+  case paper
+  case scissors
+}
+
+struct GestureView: View {
+  var gesture: Gesture
+  var body: some View {
+    switch gesture {
+    case .rock: return Text("✊")
+    case .paper: return Text("✋")
+    case .scissors: return Text("✌️")
+    }
+  }
+}
+
 final class ViewModel: ObservableObject {
   private var subscriptions: Set<AnyCancellable> = []
   @Published var gameMode: GameMode = .unlimit
   @Published var gameStrategy: GameStrategy = .toWin
+  @Published var gameGesture: Gesture = .rock
   @Published var score: Int = 0
-  @Published var timer: AnyPublisher<Int, Never> =
-    Timer.publish(every: 1, on: .main, in: .common)
-      .map { _ in 1 }
-      .eraseToAnyPublisher()
+  
   
   func toggleStrategy() {
     self.gameStrategy = self.gameStrategy.toggle()
   }
-
+  
 }
